@@ -1,7 +1,7 @@
-# @felloh/node-sdk
+# @felloh-org/node-sdk
 
 [![CI](https://github.com/felloh-org/node-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/felloh-org/node-sdk/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@felloh/node-sdk)](https://www.npmjs.com/package/@felloh/node-sdk)
+[![npm](https://img.shields.io/npm/v/@felloh-org/node-sdk)](https://www.npmjs.com/package/@felloh-org/node-sdk)
 
 Official Node.js SDK for the [Felloh](https://www.felloh.com) payments API.
 
@@ -10,7 +10,7 @@ Official Node.js SDK for the [Felloh](https://www.felloh.com) payments API.
 ## Installation
 
 ```sh
-npm install @felloh/node-sdk
+npm install @felloh-org/node-sdk
 ```
 
 Requires Node.js 18 or later.
@@ -18,7 +18,7 @@ Requires Node.js 18 or later.
 ## Quick Start
 
 ```typescript
-import { FellohClient } from '@felloh/node-sdk';
+import { FellohClient } from '@felloh-org/node-sdk';
 
 const client = new FellohClient({
   publicKey: process.env.FELLOH_PUBLIC_KEY,
@@ -172,7 +172,7 @@ console.log(page.meta.count); // total count
 Most resources also provide a `listAll()` method that returns an `AsyncIterable` for automatic pagination:
 
 ```typescript
-import { toArray } from '@felloh/node-sdk';
+import { toArray } from '@felloh-org/node-sdk';
 
 // Iterate one by one
 for await (const booking of client.bookings.listAll({ organisation: 'org-id' })) {
@@ -186,7 +186,7 @@ const all = await toArray(client.bookings.listAll({ organisation: 'org-id' }));
 ## Webhook Verification
 
 ```typescript
-import { verifyWebhookSignature, assertWebhookSignature } from '@felloh/node-sdk';
+import { verifyWebhookSignature, assertWebhookSignature } from '@felloh-org/node-sdk';
 
 // Returns boolean
 const isValid = verifyWebhookSignature({
@@ -212,7 +212,7 @@ import {
   FellohError,
   FellohNotFoundError,
   FellohValidationError,
-} from '@felloh/node-sdk';
+} from '@felloh-org/node-sdk';
 
 try {
   await client.bookings.get('non-existent');
@@ -243,7 +243,7 @@ try {
 Pass a `logger` callback to observe every HTTP request:
 
 ```typescript
-import type { LogEntry } from '@felloh/node-sdk';
+import type { LogEntry } from '@felloh-org/node-sdk';
 
 const client = new FellohClient({
   publicKey: '...',

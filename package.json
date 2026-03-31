@@ -1,5 +1,5 @@
 {
-  "name": "@felloh/node-sdk",
+  "name": "@felloh-org/node-sdk",
   "version": "0.1.0",
   "description": "Official Node.js SDK for the Felloh payment API",
   "main": "./dist/cjs/index.js",
