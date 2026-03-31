@@ -3,7 +3,7 @@
 [![CI](https://github.com/felloh-org/node-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/felloh-org/node-sdk/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/@felloh/node-sdk)](https://www.npmjs.com/package/@felloh/node-sdk)
 
-Official Node.js SDK for the [Felloh](https://www.felloh.com) payment API.
+Official Node.js SDK for the [Felloh](https://www.felloh.com) payments API.
 
 [API Documentation](https://developers.felloh.com) | [GitHub](https://github.com/felloh-org/node-sdk)
 
